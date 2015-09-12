@@ -8,7 +8,7 @@ app.constant("Config", {
   "WordPress": "http://example.com/",
 })
 // config contact
-app.constant("ConfigContact", {
+app.constant("ConfigContact", { 
   "EmailId": "weblogtemplatesnet@gmail.com",
   "ContactSubject": "Contact"
 })

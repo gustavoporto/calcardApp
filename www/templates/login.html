@@ -1,28 +1,44 @@
-<ion-view view-title="Login" class="grey_bg">
-  	<ion-content padding="10">
-      <div class="list">
-			<p class="form_logo">
-         	<img title="" alt="" src="img/logomain.png" class="">
-         </p>
-        	<label class="item item-input">
-          	<input type="email" placeholder="email">
-        	</label>
-        	<label class="item item-input">
-          	<input type="password" placeholder="password">
-        	</label>
-         <a ng-href="#/app/forgot" class="button button-clear button-block button-assertive">
-           	Forgot Password?
-         </a>
-        	<button ng-click="doLogin();" class="button button-block button-assertive">
-           	LOGIN
-         </button>
-         <button class="button button-clear button-block">
-           	Don't have an account?
-         </button>
-         <a ng-href="#/app/signup" class="button button-clear button-block button-assertive">
-           	Create Account
-         </a>
-      </div>
+<ion-view view-title="" class="grey_bg" hide-nav-bar="true" >
+
+  <ion-content padding="10">
+
+    <div class="list">
+
+      <p class="form_logo">
+          <img title="" alt="" src="img/logomain.png" class="">
+
+          <font> VOCÊ QUER, VOCÊ PODE!</font>
+      </p>
+
+      <label class="item item-input">
+        <input type="number" placeholder="CPF">
+      </label>
+    
+      <label class="item item-input">
+        <input type="password" placeholder="Senha">
+      </label>
+
+      <a ng-href="#/app/forgot" class="button button-clear button-block button-light">
+        Esqueci minha senha 
+      </a>
+
+      <button ng-click="doLogin();" class="button button-block button-orange">
+        Entrar
+      </button>
+
+      <!--
+      <button class="button button-clear button-block">
+        Não tem uma conta?
+      </button>
+      !-->
       
+
+      <a ng-href="#/app/signup" class="button button-clear button-block button-assertive">
+        Criar minha conta
+      </a>
+
+    </div>
+
   </ion-content>
+
 </ion-view>

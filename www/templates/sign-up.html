@@ -1,30 +1,41 @@
-<ion-view view-title="Register" class="grey_bg">
+<ion-view view-title="Register" class="grey_bg" hide-nav-bar="true">
+
   	<ion-content padding="10">
+
       <div class="list">
-			<p class="form_logo">
-         	<img title="" alt="" src="img/logomain.png" class="">
-         </p>
-         <label class="item item-input">
-          	<input type="text" placeholder="full name">
-        	</label>
-         <label class="item item-input">
-          	<input type="text" placeholder="username">
-        	</label>
-        	<label class="item item-input">
-          	<input type="email" placeholder="email">
-        	</label>
-        	<label class="item item-input">
-          	<input type="password" placeholder="password">
-        	</label>
-        	<button ng-click="doRegister();" class="button button-block button-assertive">
-           	SIGN UP
-         </button>
-         <button class="button button-clear button-block">
-           	Already have an account?
-         </button>
-         <a ng-href="#/app/login" class="button button-clear button-block button-assertive">
-           	Login
-         </a>
+
+        <p class="form_logo">
+          <img title="" alt="" src="img/logomain.png" class="">
+        </p>
+
+        <label class="item item-input">
+          <input type="text" placeholder="Nome completo">
+        </label>
+
+        <label class="item item-input">
+          <input type="text" placeholder="CPF">
+        </label>
+
+      	<label class="item item-input">
+        	<input type="email" placeholder="E-Mail">
+      	</label>
+
+      	<label class="item item-input">
+        	<input type="password" placeholder="Senha">
+      	</label>
+        	
+        <button ng-click="doRegister();" class="button button-block button-orange">
+         	Cadastrar-se
+        </button>
+
+        <!--<button class="button button-clear button-block">
+          Já tem uma conta?
+        </button>!-->
+
+       <a ng-href="#/app/login" class="button button-clear button-block button-light">
+         	Já tenho conta
+       </a>
+
       </div>
       
   </ion-content>

@@ -1,21 +1,31 @@
 app.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
   	//sidebar
+    
     .state('app', {
       url: "/app",
       abstract: true,
       templateUrl: "templates/sidebar-menu.html"
     })
+
+    //  welcome page
+   .state('welcome', {
+      url: "/welcome",
+      templateUrl: "templates/welcome.html",
+      controller: "LoginCtrl"
+    })
+
 	 //  login page
-	 .state('app.login', {
+   .state('app.login', {
       url: "/login",
       views: {
         'menuContent' :{
-          	templateUrl: "templates/login.html",
-		  		controller: "LoginCtrl"
+            templateUrl: "templates/login.html",
+          controller: "LoginCtrl"
         }
       }
     })
+   
 	 // Sign up page
 	 .state('app.signup', {
       url: "/signup",
@@ -283,7 +293,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
       }
     })
 	 // tags page wordpress
-	 .state('wordpress.tags', {
+	 .state('wordpress.tags', { 
       url: "/tags",
       views: {
         'menuWorPress' :{
@@ -292,6 +302,8 @@ app.config(function($stateProvider, $urlRouterProvider) {
         }
       }
     })
+
 	 //  login page
-  	$urlRouterProvider.otherwise("/app/login");
+   $urlRouterProvider.otherwise("/app/login");
+
 })
