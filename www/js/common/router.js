@@ -9,10 +9,14 @@ app.config(function($stateProvider, $urlRouterProvider) {
     })
 
     //  welcome page
-   .state('welcome', {
+   .state('app.welcome', {
       url: "/welcome",
-      templateUrl: "templates/welcome.html",
-      controller: "LoginCtrl"
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/welcome.html",
+          controller: "WelcomeCtrl"
+        }
+      }
     })
 
 	 //  login page
@@ -25,7 +29,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
         }
       }
     })
-   
+
 	 // Sign up page
 	 .state('app.signup', {
       url: "/signup",

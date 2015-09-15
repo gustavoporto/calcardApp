@@ -97,9 +97,25 @@ app.controller('MainCtrl', ['$scope', '$ionicSideMenuDelegate', '$ionicHistory',
 app.controller('LoginCtrl', ['$state','$scope', function($state, $scope) {	
 	// add your login logic here
 	$scope.doLogin = function(){
-		$state.go('app.features');
+		$state.go('app.welcome');
 	}
 }])
+
+.controller('WelcomeCtrl', function($scope) {
+  $scope.items = [
+    { id: 1, title: 'Supermercado', text: 'Hippo Supermercados', icon: 'icon ion-bag', time: '01/09/2015', valor: 'R$ 180,00'},
+    { id: 2, title: 'Saúde', text: 'Drogaria São Bento', icon: 'icon ion-ios-heart', time: '07/09/2015', valor: 'R$ 22,75'},
+    { id: 3, title: 'Cafeteria', text: 'Café Paris', icon: 'icon ion-coffee', time: '10/09/2015', valor: 'R$ 15,00'},
+    { id: 4, title: 'Outros', text: 'Madeireira Ataliba', icon: 'icon ion-more', time: '10/09/2015', valor: 'R$ 76,90'},
+    { id: 5, title: 'Supermercado', text: 'Sacolão V F Palhoça', icon: 'icon ion-bag', time: '11/09/2015', valor: 'R$ 79,95'},
+    { id: 6, title: 'Viagem', text: 'Gol linhas aéreas', icon: 'icon ion-plane', time: '12/09/2015', valor: 'R$ 1.250,00'},
+    /*{ id: 3, img: 'http://41.media.tumblr.com/c0f54d52d7070a3801b4d926cd4ba71e/tumblr_nphz25UrRh1qd3hr1o1_1280.jpg', title: 'Title 3', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a velit ac eros suscipit lobortis.', icon: 'icon ion-ios-star', time: '19-08-2015'},
+    { id: 4, title: 'Title 4', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse cursus enim nec convallis convallis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.', icon: 'icon ion-plane', time: '18-08-2015'},
+    { id: 5, title: 'Title 5', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse cursus enim nec convallis convallis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.', icon: 'icon ion-ios-game-controller-a', time: '10-08-2015'},
+    { id: 6, title: 'Title 6', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus laoreet lacus quis tempor.', icon: 'icon ion-home', time: '02-08-2015'},*/
+  ];
+});
+
 // Sign up page of app //
 app.controller('SignUpCtrl', ['$state','$scope', function($state, $scope) {	
 	// sign up logic here

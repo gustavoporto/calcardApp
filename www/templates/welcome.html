@@ -1,52 +1,31 @@
-<ion-slide-box on-slide-changed="slideHasChanged($index)">
+<ion-view view-title="Timeline" class="grey_bg">
+		
 
-    <ion-slide class = "background">
-      
-	  <ion-content padding="10">
+	<ion-content>
+		<div>
+		  <ul class="timeline">
+		  	<li ng-repeat="item in items">
+		      <!--For icon of timeline:
+		      Use <img/> if you want to use a picture in stead of icon, for example
+		      <div class="tmicon tmicon-calm"><img src="YourPicture.jpg"></div>-->
+		      <div class="tmicon tmicon-dark"><i class="{{item.icon}}"></i></div>
 
-	    <div class="list">
+		      	<div class="tmlabel tmlabel-orange">
 
-	      <p class="form_logo">
-	          <img title="" alt="" src="img/logomain.png" class="">
-	      </p>
-	    
-	      <label class="item item-input">
-	        <input type="number" placeholder="CPF">
-	      </label>
-	    
-	      <label class="item item-input">
-	        <input type="password" placeholder="Senha">
-	      </label>
+		        	<h4>{{item.title}}</h4>
 
-	      <a ng-href="#/app/forgot" class="button button-clear button-block button-assertive">
-	        Esqueci minha senha 
-	      </a>
+		        	<p>
+		        		<small><i class="icon ion-ios-clock"></i>  {{item.time}}</small>
+		        	</p>
+		        		
+		        	<img class ="timelineimg" ng-if='item.img' src="{{item.img}}"/>
 
-	      <button ng-click="doLogin();" class="button button-block button-orange">
-	        Entrar
-	      </button>
+		  			<p>{{item.text}} - <small>{{item.valor}}</small></p>
 
-	      <button class="button button-clear button-block">
-	        Não tem uma conta?
-	      </button>
-	      
+		  		</div>
+		  	</li>
+		  </ul>
+		</div>
+  </ion-content>
 
-	      <a ng-href="#/app/signup" class="button button-clear button-block button-assertive">
-	        Criar minha conta
-	      </a>
-
-	    </div>
-
-	  </ion-content>
-
-    </ion-slide>
-
-    <ion-slide>
-      <div class="box yellow"><h1>YELLOW</h1></div>
-    </ion-slide>
-
-    <ion-slide>
-      <div class="box pink"><h1>PINK</h1></div>
-    </ion-slide>
-
- </ion-slide-box>
+</ion-view>
